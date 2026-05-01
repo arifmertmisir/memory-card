@@ -1,16 +1,48 @@
-# React + Vite
+# 🎮 Pokemon Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and dynamic **Pokemon Memory Game** designed to test your memory skills! This project is built with React and fetches real-time data using the [PokeAPI](https://pokeapi.co/).
 
-Currently, two official plugins are available:
+🚀 **[Live Demo](memory-card-2je8dwfp4-arifmertmisirs-projects.vercel.app)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+*   **Dynamic Data:** Real Pokemon names, types, and high-quality artwork fetched directly from PokeAPI.
+*   **Shuffle Logic:** A smart algorithm that reshuffles the entire deck every time a card is clicked.
+*   **Score Tracking:** Tracks your current streak and saves your **Best Score** throughout the session.
+*   **Retro UI:** Features the 'Press Start 2P' font and iconic Pokemon colors for a nostalgic arcade feel.
+*   **Responsive Design:** Fully responsive layout built with CSS Flexbox for all screen sizes.
+*   **Hover Animations:** Smooth 3D scaling and glow effects when hovering over cards.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+*   **React** (Vite)
+*   **CSS3** (Flexbox, Transitions, Glassmorphism)
+*   **JavaScript** (ES6+, Async/Await, Promise.all)
+*   **PokeAPI** (External data source)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🕹️ How to Play
+
+*   Click on any Pokemon card to start the game.
+*   Every **unique** click earns you **1 point**, and the deck will shuffle.
+*   **Watch out!** If you click the same Pokemon twice, your score resets to zero.
+*   The goal is to click all Pokemon without repeating any. Can you catch 'em all?
+
+## 🚀 Installation (Local)
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/arifmertmisir/memory-card.git](https://github.com/arifmertmisir/memory-card.git)
+    ```
+2.  Install dependencies & Run:
+    ```bash
+    npm install && npm run dev
+    ```
+
+## 👤 Author
+
+**Arif Mert Mısır**
+*   GitHub: [@arifmertmisir](https://github.com/arifmertmisir)
+*   LinkedIn: [linkedin.com/in/arifmertmisir](https://www.linkedin.com/in/mert-misir-06abbb1a4/)
+
+---
+*Developed as part of a React learning journey. Deployed on Vercel.*
