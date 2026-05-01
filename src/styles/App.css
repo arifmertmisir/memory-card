@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;   
+    background-color: rgb(255, 0, 0);
+    color: yellow;
+}
+
+.score-board {
+    color: aliceblue;
+    text-align: end;
+    font-weight: bold;
+    padding-right: 80px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;   /* Icindeki elemanlari yanyana diz */
+    flex-wrap: wrap; /* Sığmayanlar alt satıra geçsin */
+    gap: 20px;       /* Kartlar arası boşluk */
+    justify-content: center; /* Ortala */
+   
+}
+
+.card {
+    width: 200px; /* 6 tanesinin yan yana sığması için ideal genişlik */
+    text-align: center; /* Kartın içindeki ismi ve tipi (p etiketlerini) ortalar. */
+    font-weight: bold;
+    box-shadow: 0px 10px 20px rgb(0, 0, 1); /* Kartın altına siyah, hafif şeffaf bir gölge atar. */
+    border-radius: 20px; /* rounded shape köselerden */
+    background-color: rgba(255, 255, 255, 0.1); /* Beyaz rengi %10 görünürlükle uygula (hafif bir parlaklık verir). */
+    cursor: pointer; /* Fareyle üzerine gelince "tıklanabilir" el işareti çıkar. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hareketin yumuşak olması için */
+}
+
+.card img {
+    width: 100%;  /* Resim, içinde bulunduğu .card kutusunun genişliğine (yani 200px'e) tam sığsın. */
+    display: block; /* Resmin altında bazen oluşan o gıcık 2-3 piksellik boşluğu siler. */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Kartı yukarı kaldırır ve hafif büyütür */
+    box-shadow: 0px 20px 80px rgba(255, 203, 5, 0.4); /* Sarı parlayan bir gölge verir */
+    background-color: rgba(255, 255, 255, 0.2); /* Arka planı biraz daha belirginleştirir */
+}
+
+/* Resim hover olduğunda biraz parlasın */
+.card:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 10px white);
+}
+
