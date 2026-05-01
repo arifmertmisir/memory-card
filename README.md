@@ -2,7 +2,7 @@
 
 A fun and dynamic **Pokemon Memory Game** designed to test your memory skills! This project is built with React and fetches real-time data using the [PokeAPI](https://pokeapi.co/).
 
-🚀 **[Live Demo](memory-card-2je8dwfp4-arifmertmisirs-projects.vercel.app)**
+🚀 **[Live Demo](https://memory-card-fawn-phi.vercel.app/)**
 
 ## ✨ Features
 
