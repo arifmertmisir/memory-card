@@ -50,9 +50,18 @@ export default function App() {
         Get points by clicking on an image but don't click on any more than
         once!
       </h2>
-      <div className="score-board">
-        <p>Score: {score}</p>
-        <p>Best Score: {totalScore}</p>
+      <div className="scoreboard">
+        <table>
+          <th colSpan={2}>Scoreboard</th>
+          <tr>
+            <th>Current Score</th>
+            <th>Best Score</th>
+          </tr>
+          <tr>
+            <td>{score}</td>
+            <td>{totalScore}</td>
+          </tr>
+        </table>
       </div>
       <div className="card-container">
         {pokemonList.map((pokemon) => (

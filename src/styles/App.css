@@ -8,12 +8,17 @@ body {
     color: yellow;
 }
 
-.score-board {
-    color: aliceblue;
-    text-align: end;
-    font-weight: bold;
-    padding-right: 80px;
+.scoreboard {
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid yellow;
+    color: antiquewhite;
+    background-color: black;
+    padding:5px;
 }
 
 .card-container {
