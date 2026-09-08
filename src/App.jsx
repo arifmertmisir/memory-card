@@ -21,7 +21,6 @@ export default function App() {
         })),
     );
 
-    // Tüm isteklerin bitmesini bekleyip state'i tek seferde güncelliyoruz
     Promise.all(fetchAll).then((results) => {
       console.log(results);
       setPokemonList(results);
@@ -50,20 +49,40 @@ export default function App() {
         Get points by clicking on an image but don't click on any more than
         once!
       </h2>
-      <div className="scoreboard">
-        <table>
-          <th colSpan={2}>Scoreboard</th>
-          <tr>
-            <th>Current Score</th>
-            <th>Best Score</th>
-          </tr>
-          <tr>
-            <td>{score}</td>
-            <td>{totalScore}</td>
-          </tr>
+      <div className="flex justify-center font-bold my-4">
+        <table className="bg-black">
+          <thead>
+            <tr>
+              <th
+                className="border-2 border-solid border-yellow-400 p-2"
+                colSpan={2}
+              >
+                Scoreboard
+              </th>
+            </tr>
+            <tr>
+              <th className="border-2 border-solid border-yellow-400 p-2">
+                Current Score
+              </th>
+              <th className="border-2 border-solid border-yellow-400 p-2">
+                Best Score
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border-2 border-solid border-yellow-400 p-2">
+                {score}
+              </td>
+              <td className="border-2 border-solid border-yellow-400 p-2">
+                {totalScore}
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
-      <div className="card-container">
+
+      <div className="flex flex-wrap justify-center gap-4">
         {pokemonList.map((pokemon) => (
           <Card
             key={pokemon.id}
