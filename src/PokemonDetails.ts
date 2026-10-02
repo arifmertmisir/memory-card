@@ -1,4 +1,6 @@
-const pokemons = [
+import type { Pokemon } from "./types/Pokemon"
+
+const pokemons:Omit<Pokemon, "image">[] = [
   {
     id: 1,
     name: "pikachu",

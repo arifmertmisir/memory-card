@@ -2,18 +2,19 @@ import { useState, useEffect } from "react";
 import pokemons from "./PokemonDetails";
 import Card from "./components/Card";
 import "./styles/App.css";
+import type { Pokemon } from "./types/Pokemon"
 
 export default function App() {
-  const [pokemonList, setPokemonList] = useState([]);
-  const [clickedIds, setClickedIds] = useState([]);
-  const [score, setScore] = useState(0);
-  const [totalScore, setTotalScore] = useState(0);
+  const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
+  const [clickedIds, setClickedIds] = useState<number[]>([]);
+  const [score, setScore] = useState<number>(0);
+  const [totalScore, setTotalScore] = useState<number>(0);
 
   useEffect(() => {
-    const fetchAll = pokemons.map((p) =>
+    const fetchAll:Promise<Pokemon>[] = pokemons.map((p:Omit<Pokemon,"image">):Promise<Pokemon> =>
       fetch(`https://pokeapi.co/api/v2/pokemon/${p.name}`)
-        .then((res) => res.json())
-        .then((data) => ({
+        .then((res:Response):Promise<any> => res.json())
+        .then((data):Pokemon => ({
           id: p.id,
           name: p.name,
           type: p.type,
@@ -21,13 +22,13 @@ export default function App() {
         })),
     );
 
-    Promise.all(fetchAll).then((results) => {
+    Promise.all(fetchAll).then((results:Pokemon[]):void => {
       console.log(results);
       setPokemonList(results);
     });
   }, []);
 
-  function handleCardClick(pokemon) {
+  function handleCardClick(pokemon:Pokemon):void {
     if (clickedIds.includes(pokemon.id)) {
       if (score > totalScore) {
         setTotalScore(score);
